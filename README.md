@@ -1,7 +1,7 @@
-# My Personal Website Project
+# Personal Website
 https://zuzala.github.io/
 
 TO DO:<br/>
 -update domain name<br/>
--create landing page<br/>
--create 4 sub-pages linked from main
+-create 4 sub-pages linked from main<br/>
+-style main, implement JavaScript

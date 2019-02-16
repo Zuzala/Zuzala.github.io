@@ -1,5 +1,4 @@
 # Personal Website
-https://zuzala.github.io/
 
 TO DO:<br/>
 -update domain name<br/>

@@ -40,9 +40,9 @@ particlesJS('particles-js',
         "value": 3,
         "random": true,
         "anim": {
-            "enable": false,
-            "speed": 95.90409590409591,
-            "size_min": 3.196803196803197,
+            "enable": true,
+            "speed": 10,
+            "size_min": .1,
             "sync": false
         }
         },

@@ -123,7 +123,6 @@ particlesJS('particles-js', particleJSON);
 
 function transitionParticles(direction){
     
-
     switch(direction){
         case 'research':
             particleJSON.interactivity.events.onhover.enable = true;

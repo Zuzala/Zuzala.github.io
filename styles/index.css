@@ -13,12 +13,17 @@ html, body {
     background-color: black;
 }
 
+.hidden {
+    visibility: hidden;
+    /* transition: .5s; */
+}
+
 #table {
     display: table;
     padding: 0px;
     max-width: 100vw;
     max-height: 100vh;
-
+    
 }
 
 .group {
@@ -90,6 +95,8 @@ a {
     display: inline-block;
     width: 100%;
     height: 100%;
+    text-decoration: none;
+    color: inherit;
 }
 
 a:hover h2{

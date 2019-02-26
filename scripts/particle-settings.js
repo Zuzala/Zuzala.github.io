@@ -1,4 +1,4 @@
-particlesJS('particles-js',
+var particleJSON =
 {
     "particles": {
         "number": {
@@ -108,4 +108,49 @@ particlesJS('particles-js',
         }
     },
     "retina_detect": true
-})
+}
+
+
+particlesJS('particles-js', particleJSON);
+
+
+
+
+// const default_speed = 3;
+// const default_direction = 'none';
+// var move_speed = particleJSON.particles.move.speed;
+// var move_direction = particleJSON.particles.move.direction;
+
+function transitionParticles(direction){
+    
+
+    switch(direction){
+        case 'Research':
+            particleJSON.interactivity.events.onhover.enable = true;
+            particleJSON.particles.number.value = 250;
+            particleJSON.particles.move.speed = 25;
+            particleJSON.particles.move.direction = 'bottom';
+            break;
+        case 'Creative':
+            particleJSON.interactivity.events.onhover.enable = true;
+            particleJSON.particles.number.value = 250;
+            particleJSON.particles.move.speed = 25;
+            particleJSON.particles.move.direction = 'right';
+            break;
+        case 'About':
+            particleJSON.interactivity.events.onhover.enable = true;
+            particleJSON.particles.number.value = 250;
+            particleJSON.particles.move.speed = 25;
+            particleJSON.particles.move.direction = 'left';
+            break;
+        case 'Projects':
+            particleJSON.interactivity.events.onhover.enable = true;
+            particleJSON.particles.number.value = 250;
+            particleJSON.particles.move.speed = 25;
+            particleJSON.particles.move.direction = 'top';
+            break;
+    }
+
+
+    particlesJS('particles-js', particleJSON);
+}

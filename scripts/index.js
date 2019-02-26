@@ -9,7 +9,7 @@ $('a').click(function(e){
       
     setTimeout(function(){
         window.location.href = direction + '.html';
-    }, 5000);
+    }, 2000);
     
     return false; 
 });

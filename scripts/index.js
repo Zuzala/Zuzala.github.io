@@ -3,7 +3,7 @@ $('a').click(function(e){
     e.preventDefault(); 
 
     $('#table').addClass('hidden');
-    var direction = $(this).text();
+    var direction = $(this).text().toLowerCase();
 
     transitionParticles(direction);
       

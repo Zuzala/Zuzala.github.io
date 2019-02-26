@@ -125,25 +125,25 @@ function transitionParticles(direction){
     
 
     switch(direction){
-        case 'Research':
+        case 'research':
             particleJSON.interactivity.events.onhover.enable = true;
             particleJSON.particles.number.value = 150;
             particleJSON.particles.move.speed = 25;
             particleJSON.particles.move.direction = 'bottom';
             break;
-        case 'Creative':
+        case 'creative':
             particleJSON.interactivity.events.onhover.enable = true;
             particleJSON.particles.number.value = 150;
             particleJSON.particles.move.speed = 25;
             particleJSON.particles.move.direction = 'right';
             break;
-        case 'About':
+        case 'about':
             particleJSON.interactivity.events.onhover.enable = true;
             particleJSON.particles.number.value = 150;
             particleJSON.particles.move.speed = 25;
             particleJSON.particles.move.direction = 'left';
             break;
-        case 'Projects':
+        case 'projects':
             particleJSON.interactivity.events.onhover.enable = true;
             particleJSON.particles.number.value = 150;
             particleJSON.particles.move.speed = 25;

@@ -122,7 +122,6 @@ particlesJS('particles-js', particleJSON);
 // var move_direction = particleJSON.particles.move.direction;
 
 function transitionParticles(direction){
-    
     switch(direction){
         case 'research':
             particleJSON.interactivity.events.onhover.enable = true;
@@ -147,6 +146,8 @@ function transitionParticles(direction){
             particleJSON.particles.number.value = 150;
             particleJSON.particles.move.speed = 25;
             particleJSON.particles.move.direction = 'top';
+            break;
+        default:
             break;
     }
 

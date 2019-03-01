@@ -43,3 +43,10 @@ $('span').click(function(e){
     return false; 
 });
 
+$(function() {
+    var $target = $('.scrollable');
+    $("body").mousewheel(function(event, delta) {
+      $target.scrollTop($target.scrollTop() - (delta * 30));
+      event.preventDefault();
+   });
+});

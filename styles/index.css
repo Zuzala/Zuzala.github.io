@@ -140,7 +140,7 @@ h2 {
     text-indent: 3%;
     color: silver;
     width: 100%;
-    height: 5%;
+    height: 5vh;
     border-bottom: 3px solid silver;
 }
 
@@ -149,7 +149,7 @@ h1 {
     margin-bottom: 5px;
 }
 
-#center-container {
+#center-container-horizontal {
     font-size: 24px;
     width: 80%;
     height: 100%;
@@ -161,11 +161,27 @@ h1 {
 
 }
 
+#center-container-vertical {
+    font-size: 24px;
+    width: 100%;
+    height: 90%;
+    padding: 0px;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.content {
+    width: 100vw;
+    height: 95vh;
+ 
+}
+
 .scrollable {
     overflow-y: scroll;
 }
 
-#center-container::-webkit-scrollbar { 
+.hidden-scroll::-webkit-scrollbar { 
      display: none;  
 } 
 
@@ -173,12 +189,6 @@ h1 {
 
 #about-page {
     background-image: url("../assets/prism.png");
-}
-
-.content {
-    width: 100vw;
-    height: calc(100vh - 5vh);
- 
 }
 
 #nav-home-west {
@@ -257,9 +267,82 @@ i:hover {
     font-size: 18px;
 }
 
+/* CREATIVE */
+
+#creative-page {
+    background-image: url("../assets/prism.png");
+}
+
+.content {
+    width: 100vw;
+    height: calc(100vh - 5vh);
+ 
+}
+
+#nav-home-east {
+    height: 100%;
+    width: 10%;
+    margin: 0;
+    float: right;
+}
+
+#nav-home-east h2 {
+    writing-mode: vertical-rl;
+    height: 100%;
+    float: right;
+    padding: 0px;
+    margin: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#about-blank {
+    float: left;
+    width: 10%;
+    height: 100%;
+    margin: 0;
+}
+
 
 /* RESEARCH */
 
-/* CREATIVE */
+#research-page {
+    background-image: url("../assets/prism.png");
+}
+
+#nav-home-south {
+    height: 10vh;
+    float: bottom;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
 
 /* PROJECTS */
+
+#title-projects {
+    text-align: left;
+    text-indent: 3%;
+    color: silver;
+    width: 100%;
+    height: 8%;
+    border-bottom: 3px solid silver;
+}
+
+#projects-page {
+    background-image: url("../assets/prism.png");
+}
+
+.content-projects {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+#nav-home-north {
+    height: 10vh;
+    float: bottom;
+    text-align: center;
+    vertical-align: middle;
+}

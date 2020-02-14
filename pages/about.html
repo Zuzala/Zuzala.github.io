@@ -1,61 +1,81 @@
-
-<div id="wrapper">
-    <h1 id="title">ABOUT</h1>
-    <div class="content">
-        <div onclick="navHome()" id="nav-home-west" class="nav nav-home"><span><h2>Home</h2></span></div>
-        <div id="center-container-horizontal" class="scrollable hidden-scroll">
-            <img id="profile-pic" src="../assets/profile-picture.jpg">
-            <p> Hi, my name is Andy Malinsky. I am currently a Junior at Arcadia University 
-                studying Computer Science and Mathematics. The motivation behind everything 
-                I do is to maximize learning potential.
-                <hr>
-                Learning is also a crucial part of Intelligence Science. This is where I 
-                spend most of my time. Computational models inspired by human cognition have 
-                the potential to help solve the world's hardest problems. This is why I aspire
-                to play just a small part in the quest for understanding both biological and 
-                artificial general intelligence.
-                <hr>
-                Here are some of the computer science and math courses I have taken so far.
-                <div id="course-list">
-                    <div class="course-column">
-                        <ul>
-                            <li>Programming and Concepts</li>
-                            <li>PC Applications on Networks</li>
-                            <li>Computer Organization and Architecture</li>
-                            <li>Object-Oriented Programming</li>
-                            <li>Database Management Systems and SQL</li>
-                            <li>Data Structures and Algorithms</li>
-                            <li>Client-Side Web Development</li>
-                            <li>Theory of Computation</li>
-                            <li>CS Research Writing</li>
-                            <li></li>
-                        </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Andy's Site</title>
+    <link rel="icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="about-page">
+    <div id="particles-js" class="hidden"></div>
+    <div id="wrapper">
+        <h1 id="title">ABOUT</h1>
+        <div class="content">
+            <div id="nav-home-west"><span><h2>Home</h2></span></div>
+            <div id="center-container-horizontal" class="scrollable hidden-scroll">
+                <img id="profile-pic" src="../assets/profile-picture.jpg">
+                <p> Hi, my name is Andy Malinsky. I am currently a Junior at Arcadia University 
+                    studying Computer Science and Mathematics. The motivation behind everything 
+                    I do is to maximize learning potential.
+                    <hr>
+                    Learning is also a crucial part of Intelligence Science. This is where I 
+                    spend most of my time. Computational models inspired by human cognition have 
+                    the potential to help solve the world's hardest problems. This is why I aspire
+                    to play just a small part in the quest for understanding both biological and 
+                    artificial general intelligence.
+                    <hr>
+                    Here are some of the computer science and math courses I have taken so far.
+                    <div id="course-list">
+                        <div class="course-column">
+                            <ul>
+                                <li>Programming and Concepts</li>
+                                <li>PC Applications on Networks</li>
+                                <li>Computer Organization and Architecture</li>
+                                <li>Object-Oriented Programming</li>
+                                <li>Database Management Systems and SQL</li>
+                                <li>Data Structures and Algorithms</li>
+                                <li>Client-Side Web Development</li>
+                                <li>Theory of Computation</li>
+                                <li>CS Research Writing</li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="course-column">
+                            <ul>
+                                <li>Calculus I</li>
+                                <li>Calculus II</li>  
+                                <li>Calculus III</li>
+                                <li>General Physics II</li>
+                                <li>Discrete Mathematics</li>
+                                <li>Linear Algebra with Applications</li>
+                                <li>Probability</li>
+                                <li>Intro to Analysis</li>
+                                <li>Abstract Algebra</li>
+                                <li>Differential Equations</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="course-column">
-                        <ul>
-                            <li>Calculus I</li>
-                            <li>Calculus II</li>  
-                            <li>Calculus III</li>
-                            <li>General Physics II</li>
-                            <li>Discrete Mathematics</li>
-                            <li>Linear Algebra with Applications</li>
-                            <li>Probability</li>
-                            <li>Intro to Analysis</li>
-                            <li>Abstract Algebra</li>
-                            <li>Differential Equations</li>
-                        </ul>
-                    </div>
+                </p>
+                <hr>
+                <div id="links">
+                    <a href="https://github.com/Zuzala" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+                    <span id="space-fix"></span>
+                    <a href="https://www.linkedin.com/in/andymalinsky" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a>
+                    <span id="space-fix"></span>
+                    <a><i class="fa fa-file-text fa-3x"></i></a>
                 </div>
-            </p>
-            <hr>
-            <div id="links">
-                <a href="https://github.com/Zuzala" target="_blank"><i class="fa fa-github fa-3x"></i></a>
-                <span id="space-fix"></span>
-                <a href="https://www.linkedin.com/in/andymalinsky" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a>
-                <span id="space-fix"></span>
-                <a><i class="fa fa-file-text fa-3x"></i></a>
             </div>
+            <div id="about-blank"></div>
         </div>
-        <div id="about-blank"></div>
     </div>
-</div>
+    
+    <script type="text/javascript" src="../scripts/particle-settings.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../scripts/index.js"></script>
+</body>
+</html>

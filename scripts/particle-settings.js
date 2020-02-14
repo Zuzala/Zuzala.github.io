@@ -76,7 +76,7 @@ var particleJSON =
             "mode": "repulse"
         },
         "onclick": {
-            "enable": true,
+            "enable": false,
             "mode": "push"
         },
         "resize": true
@@ -112,45 +112,3 @@ var particleJSON =
 
 
 particlesJS('particles-js', particleJSON);
-
-
-
-
-// const default_speed = 3;
-// const default_direction = 'none';
-// var move_speed = particleJSON.particles.move.speed;
-// var move_direction = particleJSON.particles.move.direction;
-
-function transitionParticles(direction){
-    switch(direction){
-        case 'research':
-            particleJSON.interactivity.events.onhover.enable = true;
-            particleJSON.particles.number.value = 150;
-            particleJSON.particles.move.speed = 25;
-            particleJSON.particles.move.direction = 'bottom';
-            break;
-        case 'creative':
-            particleJSON.interactivity.events.onhover.enable = true;
-            particleJSON.particles.number.value = 150;
-            particleJSON.particles.move.speed = 25;
-            particleJSON.particles.move.direction = 'right';
-            break;
-        case 'about':
-            particleJSON.interactivity.events.onhover.enable = true;
-            particleJSON.particles.number.value = 150;
-            particleJSON.particles.move.speed = 25;
-            particleJSON.particles.move.direction = 'left';
-            break;
-        case 'projects':
-            particleJSON.interactivity.events.onhover.enable = true;
-            particleJSON.particles.number.value = 150;
-            particleJSON.particles.move.speed = 25;
-            particleJSON.particles.move.direction = 'top';
-            break;
-        default:
-            break;
-    }
-
-
-    particlesJS('particles-js', particleJSON);
-}

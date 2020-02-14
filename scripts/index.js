@@ -1,5 +1,25 @@
 
-var indexNav = {"index": {location: "index"}};
+
+var home = "../index.html";
+var currentState = null;
+
+window.onload = function() {
+    currentState = sessionStorage.getItem("reloading");
+
+    if (currentState !== null && currentState != "null") {
+        sessionStorage.removeItem("reloading");
+        loadContent(currentState); 
+    }
+}
+
+window.onbeforeunload = function() { 
+    window.setTimeout(function () { 
+        sessionStorage.setItem("reloading", currentState);
+                
+    }, 0);
+
+    window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
+}
 
 var contentElement = document.getElementById("content");
 
@@ -9,26 +29,22 @@ var navJSON = {};
 for (i = 0; i < navs.length; i++) {
     nav = navs[i];
     navLink = nav.innerText.toLowerCase();
-    navJSON[navLink] = {location: navLink};
 
     nav.addEventListener("click", function() { 
         clickedLink = this.innerText.toLowerCase();
-        history.pushState(navJSON[clickedLink], null, clickedLink + ".html");
-        $("#content").load( "../pages/" + clickedLink + ".html" ); 
+        loadContent("../pages/" + clickedLink + ".html");
+
     });
 };
 
 function navHome(){
-    window.history.back();
+    loadContent(home);
+
 }
 
-window.onpopstate = function(event) {
-    if (event.state != null) {
-        $("#content").load( "../pages/" + event.state.location + ".html" );
-    }
-    else {
-        $("#content").load( "../index.html" );
-    }    
+function loadContent(content) {
+    // console.log(content);
+    // stateHistory.push(content);
+    $("#content").load(content); 
+    currentState = content;
 }
-
-

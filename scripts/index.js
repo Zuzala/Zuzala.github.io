@@ -1,52 +1,46 @@
 
-$('span').click(function(e){
-    e.preventDefault(); 
+var home = "../index.html";
+var currentState = null;
 
-    $('#table').addClass('hidden');
-    var direction = $(this).text().toLowerCase();
-    var going_home = false;
+window.onload = function() {
+    currentState = sessionStorage.getItem("reloading");
 
-    if(direction === 'home'){
-        $('#particles-js').removeClass('hidden');
-        $('#wrapper').addClass('hidden');
-        going_home = true;
-
-        var parent_id = $(this).closest('div').prop('id');
-        switch(parent_id){
-            case 'nav-home-north':
-                direction = 'research';
-                break;
-            case 'nav-home-west':
-                direction = 'creative';
-                break;
-            case 'nav-home-east':
-                direction = 'about';
-                break;
-            case 'nav-home-south':
-                direction = 'projects';
-                break;
-            default:
-                break;
-        }
+    if (currentState !== null && currentState != "null") {
+        sessionStorage.removeItem("reloading");
+        loadContent(currentState); 
     }
+}
 
-    transitionParticles(direction);
-      
-    setTimeout(function(){
-        if(going_home){
-            window.location.href = '../index.html';
-        } else{
-            window.location.href = 'pages/' + direction + '.html';
-        }
-    }, 2000);
-    
-    return false; 
-});
+window.onbeforeunload = function() { 
+    window.setTimeout(function () { 
+        sessionStorage.setItem("reloading", currentState);
+    }, 0);
 
-$(function() {
-    var $target = $('.scrollable');
-    $("body").mousewheel(function(event, delta) {
-      $target.scrollTop($target.scrollTop() - (delta * 30));
-      event.preventDefault();
-   });
-});
+    window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
+}
+
+var contentElement = document.getElementById("content");
+
+var navs = document.querySelectorAll(".nav");
+var navJSON = {};
+
+for (i = 0; i < navs.length; i++) {
+    nav = navs[i];
+    navLink = nav.innerText.toLowerCase();
+
+    nav.addEventListener("click", function() { 
+        clickedLink = this.innerText.toLowerCase();
+        loadContent("../pages/" + clickedLink + ".html");
+    });
+};
+
+function navHome(){
+    loadContent(home);
+}
+
+function loadContent(content) {
+    // console.log(content);
+    // stateHistory.push(content);
+    $("#content").load(content); 
+    currentState = content;
+}

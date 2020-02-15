@@ -1,5 +1,4 @@
 
-
 var home = "../index.html";
 var currentState = null;
 
@@ -15,7 +14,6 @@ window.onload = function() {
 window.onbeforeunload = function() { 
     window.setTimeout(function () { 
         sessionStorage.setItem("reloading", currentState);
-                
     }, 0);
 
     window.onbeforeunload = null; // necessary to prevent infinite loop, that kills your browser 
@@ -33,13 +31,11 @@ for (i = 0; i < navs.length; i++) {
     nav.addEventListener("click", function() { 
         clickedLink = this.innerText.toLowerCase();
         loadContent("../pages/" + clickedLink + ".html");
-
     });
 };
 
 function navHome(){
     loadContent(home);
-
 }
 
 function loadContent(content) {

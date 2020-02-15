@@ -39,8 +39,6 @@ function navHome(){
 }
 
 function loadContent(content) {
-    // console.log(content);
-    // stateHistory.push(content);
     $("#content").load(content); 
     currentState = content;
 }

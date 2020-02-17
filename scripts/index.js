@@ -39,6 +39,26 @@ function navHome(){
 }
 
 function loadContent(content) {
-    $("#content").load(content); 
+    // $("#content").load(content); 
+
+    $("#content").fadeOut(function() {
+
+        if(content == home){
+            $("#particles-js").fadeIn();
+        }
+        else {
+            $("#particles-js").fadeOut();
+        }
+
+        $("#content").load(content, function(){
+            $("#content").fadeIn();
+        });    
+    });
+
     currentState = content;
 }
+
+
+
+
+  

@@ -1,0 +1,83 @@
+
+/* ABOUT */
+
+#about-page {
+    width: 100%;
+    height: 100%;
+}
+
+#nav-home-west {
+    height: 100%;
+    width: 10%;
+    margin: 0;
+    float: left;
+}
+
+#nav-home-west h2 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height: 100%;
+    float: left;
+    padding: 0px;
+    margin: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#about-blank {
+    float: right;
+    width: 10%;
+    height: 100%;
+    margin: 0;
+}
+
+
+#profile-pic {
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+#links {
+    display: inline;
+    padding-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+}
+
+i {
+    color: white;
+}
+
+i:hover {
+    color: silver;
+}
+
+#space-fix {
+    all: unset;
+    padding-left: 5em;
+}
+
+#course-list {
+    width: 100%;
+    overflow: auto;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.course-column {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.course-column ul {
+    height: 100%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    list-style-type: none;
+    font-size: 18px;
+}

@@ -1,0 +1,15 @@
+
+/* RESEARCH */
+
+#research-page {
+    background-image: url("../assets/prism.png");
+    width: 100%;
+    height: 100%;
+}
+
+#nav-home-south {
+    height: 10vh;
+    float: bottom;
+    text-align: center;
+    vertical-align: middle;
+}

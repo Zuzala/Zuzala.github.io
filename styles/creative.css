@@ -1,0 +1,28 @@
+/* CREATIVE */
+
+#creative-content {
+    width: 95%;
+    height: 100%;
+    float: left;
+    /* border-right: whitesmoke 1px solid; */
+    
+}
+
+
+
+#nav-home-east {
+    height: 100%;
+    width: 5%;
+    margin: 0;
+    float: right;
+}
+
+#nav-home-east h2 {
+    writing-mode: vertical-rl;
+    height: 100%;
+    float: right;
+    padding: 0px;
+    margin: 5px;
+    text-align: center;
+    vertical-align: middle;
+}

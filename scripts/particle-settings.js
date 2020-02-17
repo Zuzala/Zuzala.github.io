@@ -2,7 +2,7 @@ var particleJSON =
 {
     "particles": {
         "number": {
-        "value": 150,
+        "value": 100,
         "density": {
             "enable": false,
             "value_area": 4000
@@ -18,10 +18,10 @@ var particleJSON =
             "color": "#000000"
         },
         "polygon": {
-            "nb_sides": 3
+            "nb_sides": 4
         },
         "image": {
-            "src": "img/github.svg",
+            // "src": "img/github.svg",
             "width": 100,
             "height": 100
         }

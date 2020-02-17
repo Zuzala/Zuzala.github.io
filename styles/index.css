@@ -260,15 +260,14 @@ i:hover {
 
 /* CREATIVE */
 
-#creative-page {
-    background-image: url("../assets/prism.png");
-    width: 100%;
-    height: 100%;
+#creative-content {
+
+
 }
 
 .content {
-    width: 100vw;
-    height: calc(100vh - 5vh);
+    width: 100%;
+    height: 100%;
  
 }
 

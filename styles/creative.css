@@ -1,0 +1,78 @@
+/* CREATIVE */
+
+#creative-content {
+    width: 95%;
+    height: 100%;
+    float: left;
+    
+}
+
+#creative-nav {
+    position: fixed;
+    width: 95%;
+    height: 10%;
+    border-bottom: white solid 1px;
+}
+
+.cnav-link {
+    float: left;
+    width: 20%;
+    height: 100%;
+    transition: 1s;
+}
+
+.cnav-spacer {
+    float: left;
+    width: 1%;
+    height: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.cnav-link h3 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    width: 100%;
+    height: 50%;
+    transition: 1s;
+    margin: 0;
+    padding-top: 20%;
+    /* background-color: teal; */
+}
+
+/* Change the color of navs on hover */
+.cnav-link:hover h3 {
+    background-color: #ddd;
+    color: black;
+    transition: 1s;
+    cursor: pointer;
+}
+
+/* Add a color to the active/current link */
+.cnav-link.active {
+    background-color: #4CAF50;
+    color: white;
+    
+}
+
+
+
+
+
+#nav-home-east {
+    height: 100%;
+    width: 5%;
+    margin: 0;
+    float: right;
+}
+
+#nav-home-east h2 {
+    writing-mode: vertical-rl;
+    height: 100%;
+    float: right;
+    padding: 0px;
+    margin: 5px;
+    text-align: center;
+    vertical-align: middle;
+}

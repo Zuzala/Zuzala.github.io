@@ -42,7 +42,6 @@ function loadContent(content) {
     // $("#content").load(content); 
 
     $("#content").fadeOut(function() {
-
         if(content == home){
             $("#particles-js").fadeIn();
         }
@@ -51,7 +50,25 @@ function loadContent(content) {
         }
 
         $("#content").load(content, function(){
-            $("#content").fadeIn();
+            $("#content").fadeIn(function(){
+
+                switch(content){
+                    case "../pages/creative.html":
+                        creativeSetup();
+                        break;
+                    // case "../pages/research.html":
+                    //     researchSetup();
+                    //     break;
+                    // case "../pages/projects.html":
+                    //     projectsSetup();
+                    //     break;
+                    // case "../pages/about.html":
+                    //     aboutSetup();
+                    //     break;
+                    default:
+                        break;
+                }
+            });
         });    
     });
 
@@ -59,6 +76,41 @@ function loadContent(content) {
 }
 
 
+// CREATIVE 
+var cnavSelected = false;
+
+function creativeSetup() {
+    var cnavs = document.querySelectorAll(".cnav-link");
+
+    $(".cnav-link").each(function(index) {
+
+        $(this).click(function() {
+            if(cnavSelected && $(this)[0] != $(".active")[0]){
+                $(".active").toggleClass("active");
+            }
+            else if(cnavSelected && $(this)[0] == $(".active")[0]){
+                cnavSelected = false;
+            }
+            else {
+                cnavSelected = true;
+            }
+            
+            $(this).toggleClass("active");
+        });
+
+        // $(this).addEventListener("click", function() { 
+        //     $(this).toggleClass("active");
+        //     // cnav.toggleClass(".cnav-link.active");
+        //     // clickedLink = this.innerText.toLowerCase();
+        //     // loadCreative("../pages/" + clickedLink + ".html");
+        // });
+    });
 
 
+    return cnavs;
+}
   
+function loadCreative() {
+
+
+}

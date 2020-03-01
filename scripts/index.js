@@ -39,8 +39,6 @@ function navHome(){
 }
 
 function loadContent(content) {
-    // $("#content").load(content); 
-
     $("#content").fadeOut(function() {
         if(content == home){
             $("#particles-js").fadeIn();
@@ -51,7 +49,6 @@ function loadContent(content) {
 
         $("#content").load(content, function(){
             $("#content").fadeIn(function(){
-
                 switch(content){
                     case "../pages/creative.html":
                         creativeSetup();
@@ -62,9 +59,9 @@ function loadContent(content) {
                     // case "../pages/projects.html":
                     //     projectsSetup();
                     //     break;
-                    // case "../pages/about.html":
-                    //     aboutSetup();
-                    //     break;
+                    case "../pages/about.html":
+                        aboutSetup();
+                        break;
                     default:
                         break;
                 }
@@ -75,6 +72,40 @@ function loadContent(content) {
     currentState = content;
 }
 
+
+// ABOUT
+var brandColor;
+
+function aboutSetup() {
+    $("i").hover(function(){
+        if(this.getAttribute("brand") != null) {
+            switch(this.getAttribute("brand")) {
+                case "linkedin":
+                    brandColor = "#00a0dc";
+                    break;
+                case "github":
+                    brandColor = "#b19cd9";
+                    break;
+                case "instagram":
+                    brandColor = "#fcaf45";
+                    break;
+                case "medium":
+                    brandColor = "#00ab6c";
+                    break;
+                case "youtube":
+                    brandColor = "#ff0000";
+                    break;
+            }
+        }
+        else {
+            brandColor = "silver";
+        }
+
+        $(this).css("color", brandColor);
+        }, function(){
+        $(this).css("color", "white");
+    });
+}
 
 // CREATIVE 
 var cnavSelected = false;

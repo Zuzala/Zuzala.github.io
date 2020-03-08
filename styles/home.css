@@ -113,7 +113,6 @@ h2 {
     letter-spacing: 10px;
     text-transform: uppercase;
     transition: 1s;
-
 }
 
 #nav-west h2 {
@@ -127,7 +126,6 @@ h2 {
     writing-mode: vertical-rl;
     height: 100%;
     float: right;
-    
 }
 
 #title {

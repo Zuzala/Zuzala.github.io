@@ -40,7 +40,7 @@ function navHome(){
 
 function loadContent(content) {
     $("#content").fadeOut(function() {
-        if(content == home){
+        if (content == home){
             $("#particles-js").fadeIn();
         }
         else {
@@ -78,7 +78,7 @@ var brandColor;
 
 function aboutSetup() {
     $("i").hover(function(){
-        if(this.getAttribute("brand") != null) {
+        if (this.getAttribute("brand") != null) {
             switch(this.getAttribute("brand")) {
                 case "linkedin":
                     brandColor = "#00a0dc";
@@ -112,14 +112,14 @@ var cnavSelected = false;
 
 function creativeSetup() {
     var cnavs = document.querySelectorAll(".cnav-link");
+    loadCreative("../pages/creative-sub/landing.html");
 
     $(".cnav-link").each(function(index) {
-
         $(this).click(function() {
-            if(cnavSelected && $(this)[0] != $(".active")[0]){
+            if (cnavSelected && $(this)[0] != $(".active")[0]){
                 $(".active").toggleClass("active");
             }
-            else if(cnavSelected && $(this)[0] == $(".active")[0]){
+            else if (cnavSelected && $(this)[0] == $(".active")[0]){
                 cnavSelected = false;
             }
             else {
@@ -127,21 +127,44 @@ function creativeSetup() {
             }
             
             $(this).toggleClass("active");
+
+            // load sub-content
+            if (cnavSelected) {
+                loadCreative("../pages/creative-sub/" + $(".active")[0].innerText.toLowerCase() + ".html");
+            }
+            else {
+                loadCreative("../pages/creative-sub/landing.html");
+            }
+
+
         });
-
-        // $(this).addEventListener("click", function() { 
-        //     $(this).toggleClass("active");
-        //     // cnav.toggleClass(".cnav-link.active");
-        //     // clickedLink = this.innerText.toLowerCase();
-        //     // loadCreative("../pages/" + clickedLink + ".html");
-        // });
     });
-
 
     return cnavs;
 }
   
-function loadCreative() {
+function loadCreative(subContent) {
+    $("#creative-sub").fadeOut(function() {
+        $("#creative-sub").load(subContent, function(){
+            $("#creative-sub").fadeIn(function(){
+                switch(subContent){
+                    case "cinema":
+                        
+                        break;
+                    case "photo":
 
+                        break;
+                    case "music":
+
+                        break;
+                    case "art":
+                        break;
+                    default:
+
+                        break;
+                }
+            });
+        });    
+    });
 
 }

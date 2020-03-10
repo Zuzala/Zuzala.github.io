@@ -1,0 +1,39 @@
+{
+    "videos": [
+        {
+            "title": "Refract",
+            "thumbnail": "assets/thumbnails/Refract.PNG",
+            "url": "https://youtu.be/RjeHg8LztJ0"
+        },
+        {
+            "title": "Chorus",
+            "thumbnail": "assets/thumbnails/Chorus.PNG",
+            "url": "https://youtu.be/JA6rfxrRH9I"
+        },
+        {
+            "title": "Daydream",
+            "thumbnail": "assets/thumbnails/Daydream.PNG",
+            "url": "https://youtu.be/fTMkYWax78Q"
+        },
+        {
+            "title": "Stay",
+            "thumbnail": "assets/thumbnails/Stay.PNG",
+            "url": "https://youtu.be/BmzYHf4ftlY"
+        },
+        {
+            "title": "Drift",
+            "thumbnail": "assets/thumbnails/Drift.PNG",
+            "url": "https://youtu.be/UHcGd7Af8Uc"
+        },
+        {
+            "title": "Resolute",
+            "thumbnail": "assets/thumbnails/Resolute.PNG",
+            "url": "https://youtu.be/NGni3RAkMEE"
+        },
+        {
+            "title": "Resonance",
+            "thumbnail": "assets/thumbnails/Resonance.PNG",
+            "url": "https://youtu.be/uepJRLzuAG8"
+        }
+    ]
+}

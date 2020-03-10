@@ -42,7 +42,7 @@
     padding-bottom: 50px;
 }
 
-a {
+#links a {
     width: auto;
     height: auto;
     display: inline-block;
@@ -55,7 +55,7 @@ a {
     padding-left: 5em;
 }
 
-i {
+#links a i {
     color: white;
 }
 

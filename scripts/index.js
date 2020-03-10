@@ -1,3 +1,4 @@
+// split code by page into separate files?
 
 var home = "../index.html";
 var currentState = null;
@@ -142,29 +143,46 @@ function creativeSetup() {
 
     return cnavs;
 }
-  
+
 function loadCreative(subContent) {
     $("#creative-sub").fadeOut(function() {
         $("#creative-sub").load(subContent, function(){
-            $("#creative-sub").fadeIn(function(){
-                switch(subContent){
-                    case "cinema":
-                        
-                        break;
-                    case "photo":
+            $("#creative-sub").fadeIn();
 
-                        break;
-                    case "music":
+            switch(subContent){
+                case "../pages/creative-sub/cinema.html":
+                    $.getJSON('../assets/videos.json', function(videosJSON) { 
+                        videosJSON.videos.forEach(function(video){
+                            $('.videos').append(
+                            '<div class="video" style="background-image: url(' + video.thumbnail + ')">' + 
+                                '<a class="venobox vbox-item" data-autoplay="true" data-vbtype="video" href=' + video.url + ' data-gall="myGallery"><i class="fas fa-play-circle"></i></a>' +
+                            '</div>'
+                            ); 
+                        });
+        
+                        $('.venobox').venobox({
+                            closeColor: '#f4f4f4',
+                            spinColor: '#f4f4f4',
+                            arrowsColor: '#f4f4f4',
+                            closeBackground: '#17191D',
+                            overlayColor: 'rgba(23,25,29,0.8)'
+                        }); 
+                    }); 
 
-                        break;
-                    case "art":
-                        break;
-                    default:
+                    break;
+                case "../pages/creative-sub/photo.html":
 
-                        break;
-                }
-            });
+                    break;
+                case "../pages/creative-sub/music.html":
+
+                    break;
+                case "../pages/creative-sub/art.html":
+                    break;
+                default:
+
+                    break;
+            }
+            
         });    
     });
-
 }
